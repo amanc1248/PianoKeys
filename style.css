@@ -38,6 +38,7 @@ body {
   box-shadow: 2px 5px;
   background-color: white;
   color: #141c3a;
+  cursor: pointer;
 }
 .black-key {
   width: 25px;
@@ -48,6 +49,7 @@ body {
   position: absolute;
   margin-left: -12px;
   padding: 0px;
+  cursor: pointer;
 }
 .keynote {
   width: 20px;

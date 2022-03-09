@@ -19,12 +19,23 @@ keys.forEach(function (key) {
   notes.push(document.getElementById(key));
 });
 
-// Write named functions that change the color of the keys below
-
+console.log(notes);
+// Write named functions that change the color of the keys below (THIS IS FOR WHEN THE KEY IS PRESSED)
+function keyPlay(event) {
+  event.target.style.backgroundColor = "green";
+}
+function keyReturn(event) {
+  event.target.style.backgroundColor = "";
+}
 // Write a named function with event handler properties
-
+function named(note) {
+  note.addEventListener("mousedown", keyPlay);
+  note.addEventListener("mouseup", keyReturn);
+}
 // Write a loop that runs the array elements through the function
-
+notes.forEach(function (note) {
+  named(note);
+});
 // These variables store the buttons that progress the user through the lyrics
 let nextOne = document.getElementById("first-next-line");
 let nextTwo = document.getElementById("second-next-line");
